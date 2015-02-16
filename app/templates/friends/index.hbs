@@ -1,0 +1,17 @@
+<h2>Friends Index Page</h2>
+<h3># of friends: {{length}}</h3>
+<ul>
+	{{#each}}
+		<li>
+			{{link-to fullName 'friends.show' this}} ||
+			{{link-to 'Edit' 'friends.edit' this}} ||
+			<a href="#" {{action "delete" this}}>Delete</a>
+
+
+			
+		</li>
+	{{/each}}
+</ul>
+{{link-to 'Add a friend' 'friends.new'}}
+
+{{outlet}}
